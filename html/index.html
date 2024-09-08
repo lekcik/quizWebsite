@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Quiz!</title>
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+<body>
+    <h1>Ready for a quiz?</h1>
+    <section class="container" aria-label="quiz settings">
+        <div>
+            <label for="topic">Choose a topic:</label>
+            <select id="topic" name="topic">
+                <option value="null" disabled selected>...</option>
+                <option value="history">History</option>
+                <option value="movie">Movie</option>
+                <option value="sport">Sport</option>
+                <option value="games">Games</option>
+                <option value="celebrities">Celebrities</option>
+            </select>
+        </div>
+        <div>
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" name="difficulty">
+                <option value="null" disabled selected>...</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+        <div>
+            <label for="length">Quiz length:</label>
+            <select id="length" name="length">
+                <option value="null" disabled selected>...</option>
+                <option value="short">Short</option>
+                <option value="medium">Medium</option>
+                <option value="long">Long</option>
+            </select>
+        </div>
+    </section>
+    <button class="ctaBtn">Start</button>
+</body>
+</html>
