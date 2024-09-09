@@ -1,0 +1,21 @@
+section.multiple {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.multiple h1 {
+    padding-left: var(--padding-index);
+    padding-right: var(--padding-index);
+    text-align: center;
+}
+
+section.multiple div>div {
+    border: 0.05rem solid var(--clr-primary);
+    background-color: var(--clr-btn);
+    width: 100%;
+    margin-top: var(--vh-margin);
+    padding: var(--padding-index);
+    text-align: center;
+}
