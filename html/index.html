@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/root.css">
     <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <script defer src="../js/index.js"></script>
 </head>
 <body>
     <h1>Ready for a quiz?</h1>
-    <section class="container" aria-label="quiz settings">
+    <section class="options" aria-label="quiz settings">
         <div>
             <label for="topic">Choose a topic:</label>
-            <select id="topic" name="topic">
+            <select class="topic-js" id="topic" name="topic">
                 <option value="null" disabled selected>...</option>
                 <option value="history">History</option>
                 <option value="movie">Movie</option>
@@ -27,7 +28,7 @@
         </div>
         <div>
             <label for="difficulty">Difficulty:</label>
-            <select id="difficulty" name="difficulty">
+            <select class="difficulty-js" id="difficulty" name="difficulty">
                 <option value="null" disabled selected>...</option>
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
@@ -36,7 +37,7 @@
         </div>
         <div>
             <label for="length">Quiz length:</label>
-            <select id="length" name="length">
+            <select class="length-js" id="length" name="length">
                 <option value="null" disabled selected>...</option>
                 <option value="short">Short</option>
                 <option value="medium">Medium</option>
@@ -44,6 +45,6 @@
             </select>
         </div>
     </section>
-    <button class="ctaBtn">Start</button>
+    <button class="ctaBtn" onclick="quizStart();">Start</button>
 </body>
 </html>

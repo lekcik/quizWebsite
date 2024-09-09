@@ -5,6 +5,15 @@ html {
     background-color: var(--clr-secondary);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-index);
+    height: 70vh;
+}
+
 h1 {
     font-size: 1.5rem;
 }
@@ -14,6 +23,12 @@ h2 {
 }
 
 button {
+    font-size: 0.9rem;
+    font-family: "Roboto Serif", serif;
+    cursor: pointer;
+}
+
+select {
     font-size: 0.9rem;
     font-family: "Roboto Serif", serif;
     cursor: pointer;
@@ -33,6 +48,10 @@ button {
     }
 
     button {
+        font-size: 1.1rem;
+    }
+
+    select {
         font-size: 1.1rem;
     }
 }

@@ -7,6 +7,10 @@
     --font-size: 1rem;
     --font-size-multiplier: 1.2;
 
+    --vh-margin: 10vh;
+    --padding-index: 0.5rem;
+    --gap-index: calc(0.3rem + 0.3vw);
+
     --transtion-fast: 0.15s;
     --transition-medium: 0.3s;
     --transition-slow: 0.5s;

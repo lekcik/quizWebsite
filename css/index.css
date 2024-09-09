@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    margin-bottom: var(--vh-margin);
+}
+
+section.options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-index);
+}
+
+section.options select {
+    border: 0.05rem solid var(--clr-primary);
+    background-color: var(--clr-btn);
+}
+
+.ctaBtn {
+    border: 0.05rem solid var(--clr-primary);
+    background-color: var(--clr-btn);
+    width: fit-content;
+    margin-top: var(--vh-margin);
+    padding: var(--padding-index);
+}
