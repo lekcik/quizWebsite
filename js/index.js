@@ -8,10 +8,23 @@ function quizStart() {
     }
     else {
         localStorage.removeItem('quizOptions');
+
+        let lengthConverted = 0;
+        
+        if (length === 'short') {
+            lengthConverted = 10;
+        }
+        else if (length === 'medium') {
+            lengthConverted = 20;
+        }
+        else {
+            lengthConverted = 30;
+        }
+
         let object = {
             topic: topic,
             difficulty: difficulty,
-            length: length
+            length: lengthConverted
         }
 
         localStorage.setItem('quizOptions', JSON.stringify(object));
