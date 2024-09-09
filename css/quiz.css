@@ -19,3 +19,7 @@ section.multiple div>div {
     padding: var(--padding-index);
     text-align: center;
 }
+
+section.multiple .result {
+    margin-top: var(--margin-index);
+}

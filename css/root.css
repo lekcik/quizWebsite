@@ -9,6 +9,7 @@
 
     --vh-margin: 10vh;
     --padding-index: 0.5rem;
+    --margin-index: 1.5rem;
     --gap-index: calc(0.3rem + 0.3vw);
 
     --transtion-fast: 0.15s;

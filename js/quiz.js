@@ -1,7 +1,7 @@
 const object = JSON.parse(localStorage.getItem('quizOptions'));
 console.log(object);
 
-const url = `https://opentdb.com/api.php?amount=${object.length}&category=${object.topic}&difficulty=${object.difficulty}`;
+const url = `https://opentdb.com/api.php?amount=${object.length}&category=${object.topic}&difficulty=${object.difficulty}&type=multiple`;
 console.log(url);
 
 async function getData() {
@@ -10,11 +10,14 @@ async function getData() {
     return data;
 }
 
-async function test() {
-    const data = await getData(); 
-    for (let x of data.results) { 
-        console.log(x);
-    }
+async function appRun() {
+    const data = await getData();
+
+    document.querySelector('.question-js').innerHTML = data.results[0].question;
+    console.log(data.results[0])
+    let correctAnswer = data.results[0].correct_answer;
+    let incorrectArray = data.results[0].incorrect_answers;
+    
 }
 
-test();
+appRun();
