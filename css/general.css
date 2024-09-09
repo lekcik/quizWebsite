@@ -1,0 +1,38 @@
+html {
+    font-size: 1rem;
+    font-family: "Roboto Serif", serif;
+    color: var(--clr-primary);
+    background-color: var(--clr-secondary);
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 0.9rem;
+    font-family: "Roboto Serif", serif;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    html {
+        font-size: 1.3rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}

@@ -1,3 +1,13 @@
 :root {
-    
+    --clr-primary: rgb(8, 68, 104);
+    --clr-secondary: rgb(239, 248, 255);
+    --clr-btn: rgb(179, 220, 242);
+    --clr-btn-accent: rgb(149, 204, 233);
+
+    --font-size: 1rem;
+    --font-size-multiplier: 1.2;
+
+    --transtion-fast: 0.15s;
+    --transition-medium: 0.3s;
+    --transition-slow: 0.5s;
 }
