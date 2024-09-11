@@ -1,3 +1,13 @@
+body {
+    padding-top: 5vh;
+}
+
+.count {
+    position: absolute;
+    top: 0;
+    right: 3vw;
+}
+
 section.multiple {
     display: flex;
     flex-direction: column;
@@ -18,8 +28,28 @@ section.multiple div>div {
     margin-top: var(--vh-margin);
     padding: var(--padding-index);
     text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-slow);
+}
+
+section.multiple div>div:hover {
+    background-color: var(--clr-btn-accent);
 }
 
 section.multiple .result {
     margin-top: var(--margin-index);
+}
+
+section.multiple div>div.correct {
+    background-color: var(--clr-success);
+}
+
+section.multiple div>div.incorrect {
+    background-color: var(--clr-error);
+}
+
+@media (min-width: 600px) {
+    section.multiple div>div {
+        margin-top: calc(var(--vh-margin) - 0.5rem);
+    }
 }
