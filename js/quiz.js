@@ -90,6 +90,8 @@ async function runApp() {
     }
 
     localStorage.setItem('quizStats', JSON.stringify(stats));
+
+    window.location.href = '../html/results.html';
 }
 
 runApp();
