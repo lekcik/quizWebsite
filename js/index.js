@@ -1,3 +1,6 @@
+localStorage.removeItem('quizOptions');
+localStorage.removeItem('quizStats');
+
 function quizStart() {
     const topic = document.querySelector('.topic-js').value;
     const difficulty = document.querySelector('.difficulty-js').value;

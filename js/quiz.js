@@ -1,8 +1,6 @@
 const object = JSON.parse(localStorage.getItem('quizOptions'));
-console.log(object);
 
 const url = `https://opentdb.com/api.php?amount=${object.length}&category=${object.topic}&difficulty=${object.difficulty}&type=multiple`;
-console.log(url);
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i >= 0; i--) {
@@ -21,8 +19,10 @@ function domUpdate(questionData, cycle, quizLength) {
     let count = document.querySelector('.js-count');
     let question = document.querySelector('.question-js');
     let variants = document.querySelectorAll('.variant-js');
-    
-    console.log(questionData);
+
+    variants.forEach(btn => {
+        btn.classList.remove('correct', 'incorrect');
+    });
 
     let correctAnswer = questionData.correct_answer;
     let answArray = questionData.incorrect_answers;
@@ -30,7 +30,6 @@ function domUpdate(questionData, cycle, quizLength) {
     shuffleArray(answArray);
 
     count.innerHTML = `Question ${cycle + 1} of ${quizLength}`;
-
     question.innerHTML = questionData.question;
 
     for (let i = 0; i < variants.length; i++) {
@@ -53,7 +52,7 @@ async function btnClick() {
 
 async function runApp() {
     async function runCycle(quizData, cycle, quizLength) {  
-        let correctAnsw = domUpdate(quizData[cycle], cycle, quizLength);
+        let correctAnsw = domUpdate(quizData, cycle, quizLength);
         let answer = await btnClick();
         
         const btns = document.querySelectorAll('.variant-js');
@@ -75,25 +74,22 @@ async function runApp() {
                 }
             }
         }
-        
-        cycle++;
 
-        setTimeout(() => {
-            
-        }, 1000);
+        await new Promise(resolve => setTimeout(resolve, 1000));  // 1-second delay
     }
 
     const data = await getData();
-    const quizData = data.results; 
+    const quizData = data.results;
     const quizLength = quizData.length;
     let stats = 0;
     let cycle = 0;
 
-    console.log(quizData[cycle]);
-
     while (cycle < quizLength) {
         await runCycle(quizData[cycle], cycle, quizLength);
+        cycle++;
     }
+
+    localStorage.setItem('quizStats', JSON.stringify(stats));
 }
 
 runApp();
