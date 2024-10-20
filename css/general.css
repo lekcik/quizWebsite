@@ -25,6 +25,7 @@ button {
     font-size: 0.9rem;
     font-family: "Roboto Serif", serif;
     cursor: pointer;
+    border-radius: 0.5rem;
 }
 
 select {
